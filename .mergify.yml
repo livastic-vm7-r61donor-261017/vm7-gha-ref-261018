@@ -1,0 +1,11 @@
+pull_request_rules:
+  - name: VM7 omitted ref provenance discriminator 261018
+    conditions:
+      - base = main
+      - author = livastic-vm7-r61donor-261017
+      - title = VM7_GHA_DEFAULT_REF_261018
+    actions:
+      github_actions:
+        workflow:
+          dispatch:
+            - workflow: vm7-dispatch-provenance.yml
